@@ -1,0 +1,45 @@
+Act as a Senior Mobile Automation Architect and DevOps Engineer.
+ 
+I have an existing mobile automation framework built with:
+ 
+- Appium
+ 
+- JavaScript (Node.js)
+ 
+- Cucumber BDD
+ 
+- Feature files and step definitions
+ 
+- package.json for dependencies
+ 
+Your task is to create a simple Dockerization setup so the automation tests can run inside a Docker container.
+ 
+Provide the following:
+ 
+1. A production-ready Dockerfile that:
+ 
+   - Uses an official Node.js image
+ 
+   - Installs Appium globally
+ 
+   - Installs required dependencies
+ 
+   - Copies package.json and installs npm packages
+ 
+   - Copies the project files
+ 
+   - Runs the automation tests using cucumber-js or npm test
+ 
+2. Docker commands to:
+ 
+   - Build the Docker image
+ 
+   - Run the container
+ 
+   - Execute the mobile automation test suite
+ 
+4. A short explanation of how Appium and the BDD tests run inside Docker.
+ 
+Focus only on Appium + JavaScript + Cucumber.
+ 
+Keep the solution practical and concise.

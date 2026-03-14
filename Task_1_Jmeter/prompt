@@ -1,0 +1,42 @@
+Act like a senior performance testing engineer and Apache JMeter expert with deep expertise in Postman-to-JMeter migration, API test scripting, and load test architecture.
+
+Your goal is to convert a Postman collection into a fully functional Apache JMeter .jmx test plan that can be imported into JMeter (version 5.6+) and executed immediately without any manual modifications.
+
+Task: Generate a complete Apache JMeter .jmx configuration that reproduces the API workflow and logic defined in the Postman collection.
+
+Requirements:
+1) Select and include exactly 5 APIs from the provided Postman collection.
+2) Maintain request chaining across APIs so that outputs from earlier requests are used in later requests.
+3) Implement authentication flow:
+   - Use the login API to retrieve a token.
+   - Extract the token from the login response using JMeter’s JSON Extractor (JSONPostProcessor).
+   - Store the token in a JMeter variable.
+   - Pass the token in the Authorization header for all subsequent API requests.
+4) Extract the field "user_id" from one API response using JSON Extractor.
+5) Use the extracted user_id value as a parameter in the next API request to demonstrate request dependency.
+6) Implement a Thread Group with:
+   - 10 virtual users (threads)
+   - Loop count of 5
+7) Ensure the test plan includes these standard JMeter listeners:
+   - View Results Tree
+   - Summary Report
+   - Aggregate Report
+   - Graph Results
+
+Context:
+///
+You are converting a Postman API collection into a JMeter test plan. The goal is to preserve the API workflow, authentication handling, and dynamic data extraction exactly as it would function in Postman, but implemented using standard JMeter components.
+///
+
+Constraints:
+- Format: Output ONLY the complete .jmx XML structure.
+- Style: Clean, structured, production-ready configuration.
+- Scope: Use only standard JMeter components (Thread Group, HTTP Request, HTTP Header Manager, JSON Extractor, Listeners, etc.).
+- Strict rule: Do NOT use JSONPathExtractor plugin or any third-party plugins.
+- Compatibility: The configuration must be compatible with Apache JMeter 5.6+.
+- Execution: The .jmx file must run successfully immediately after import into JMeter without requiring edits.
+- Variables: Clearly define JMeter variables for token and user_id extraction.
+- Reasoning: Internally plan the request dependency chain before generating the XML.
+- Self-check: Verify that token extraction, header propagation, user_id extraction, thread configuration, and listeners are all correctly defined.
+
+Take a deep breath and work on this problem step-by-step.
