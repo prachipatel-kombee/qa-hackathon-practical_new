@@ -1,0 +1,24 @@
+just go through the postman 
+select:
+ 7 inter-connected APIs
+ The APIs must:
+ Contain at least 5 input parameters
+ Have large request and response bodies
+ Be logically connected to each other
+
+, generate additional test cases for eacch API  such as:
+ Positive tests
+ Negative tests
+ Edge case validations
+ Missing parameter tests
+ Invalid data tests
+ Response validation tests
+
+note : use same as is it l and when I import it should work propelry without any changes  same as hackathon postman collecation  
+
+create new json file for this changes 
+
+multiple testcases generate for each api 25 
+
+
+
